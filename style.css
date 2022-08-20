@@ -1,0 +1,136 @@
+*{
+    margin:    0;
+    padding:   0;
+    box-sizing: border-box;;
+}
+
+body {
+    background-image: linear-gradient(95deg, #13536e, #003a52);
+    color: white;
+    font-family: "roboto",sans-serif;
+    min-height: 100vh;
+}
+
+
+header {
+    font-size: 1.2rem;
+}
+
+header, 
+form{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, form button{
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: white;
+}
+
+form button{
+    color:#13536e;
+    background-color:#ffffff;
+    cursor: cell;
+    transition: all 0.3s ease;
+}
+
+form button:hover{
+    color:#fdfeff;
+    background: #13536e;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+}
+
+
+.todo li{
+    flex: 1;
+}
+
+.trash-btn,
+.complete-btn {
+  
+    color:#ffffff;
+    background: #4d1800;
+    border:none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.complete-btn {
+    background: #003a52;
+}
+
+.todo-item{
+    padding: 5px;
+}
+
+.fa-trash,
+.fa-check {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.2;
+}
+
+
+.todo{
+    margin: 0.5rem;
+    background: white;
+    color: #13536e;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.fall {
+    transform: translateY(8rem) rotatez(20deg);
+    opacity: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden
+}
+select {
+    color: #0080ff;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background: #0080ff;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+}
